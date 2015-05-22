@@ -1,7 +1,6 @@
-# Shell prompt based on the Solarized Dark theme.
-# Screenshot: http://i.imgur.com/EkEtphC.png
 # Heavily inspired by @necolas’s prompt: https://github.com/necolas/dotfiles
 # iTerm → Profiles → Text → use 13pt Monaco with 1.1 vertical spacing.
+# Colors: http://upload.wikimedia.org/wikipedia/en/1/15/Xterm_256color_chart.svg
 
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
     export TERM='gnome-256color';
@@ -53,7 +52,7 @@ prompt_git() {
 
         [ -n "${s}" ] && s=" [${s}]";
 
-        echo -e "${1}${branchName}${blue}${s}";
+        echo -e "${1}${branchName}${red}${s}";
     else
         return;
     fi;
@@ -68,9 +67,9 @@ if tput setaf 1 &> /dev/null; then
     cyan=$(tput setaf 44);
     cyanlight=$(tput setaf 159);
     green=$(tput setaf 48);
-    orange=$(tput setaf 202);
+    orange=$(tput setaf 208);
     purple=$(tput setaf 125);
-    red=$(tput setaf 124);
+    red=$(tput setaf 203);
     violet=$(tput setaf 127);
     white=$(tput setaf 15);
     yellow=$(tput setaf 228);
