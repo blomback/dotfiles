@@ -12,7 +12,7 @@ alias la="ls -laFG"
 alias lsd="ls -lFG | grep --color=never '^d'"
 alias ls="command ls -G"
 
-if [ ! -h /usr/bin/subl ]; then
+if [ ! -h /usr/bin/subl ] && [ -g "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ]; then
 	ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/bin/subl;
 fi;
 
