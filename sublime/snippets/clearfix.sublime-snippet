@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}${0}
+]]></content>
+  <tabTrigger>clear</tabTrigger>
+  <scope>source.css</scope>
+  <description>Clearfix</description>
+</snippet>
