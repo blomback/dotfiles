@@ -15,3 +15,9 @@ done
 
 ln -sfv "$DOTFILES_DIR/com/.bash_profile" ~
 ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
+
+# sublime settings
+ln -sfv "$DOTFILES_DIR/sublime/AdvancedNewFile.sublime-settings" ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/AdvancedNewFile.sublime-settings
+ln -sfv "$DOTFILES_DIR/sublime/Base File.sublime-settings" ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Base\ File.sublime-settings
+ln -sfv "$DOTFILES_DIR/sublime/Package Control.sublime-settings" ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package\ Control.sublime-settings
+ln -sfv "$DOTFILES_DIR/sublime/Preferences.sublime-settings" ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings
