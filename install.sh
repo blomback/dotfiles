@@ -23,5 +23,11 @@ ln -sfv "$SUBLIME_DIR/Base File.sublime-settings" ~/Library/Application\ Support
 ln -sfv "$SUBLIME_DIR/Package Control.sublime-settings" ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package\ Control.sublime-settings
 ln -sfv "$SUBLIME_DIR/Preferences.sublime-settings" ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings
 ln -sfv "$SUBLIME_DIR/Default (OSX).sublime-keymap" ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Default\ \(OSX\).sublime-keymap
-ln -sfv "$SUBLIME_DIR/builds/" ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/builds
-ln -sfv "$SUBLIME_DIR/snippets/" ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/snippets
+
+if [ ! -d ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/builds ]; then
+	ln -sfv "$SUBLIME_DIR/builds/" ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/builds > /dev/null 2>&1;
+fi
+
+if [ ! -d ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/snippets ]; then
+	ln -sfv "$SUBLIME_DIR/snippets/" ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/snippets > /dev/null 2>&1;
+fi
