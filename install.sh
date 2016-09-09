@@ -15,6 +15,7 @@ done
 # symlinks
 
 ln -sfv "$DOTFILES_DIR/com/.bash_profile" ~
+ln -sfv "$DOTFILES_DIR/com/.zshrc" ~
 ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
 
 # sublime settings
