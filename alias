@@ -12,8 +12,10 @@ alias la="ls -laFG"
 alias lsd="ls -lFG | grep --color=never '^d'"
 alias ls="command ls -G"
 
-if [ ! -h /usr/local/bin/subl ] && [ -g "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ]; then
-	ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl;
+if [ ! -h /usr/local/bin/subl ] && [ -e "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ]; then
+	echo "Adding subl command";
+	ln -sfv "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl;
+	echo "Done";
 fi;
 
 alias chrome="open -a /Applications/Google\ Chrome.app"
