@@ -8,15 +8,19 @@ export SUBLIME_DIR="$DOTFILES_DIR/sublime"
 [ -d "$DOTFILES_DIR/.git" ] && git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin master
 
 # run setup files
-for DOTFILE in "$DOTFILES_DIR"/setup/.{osx}; do
+
+for DOTFILE in "$DOTFILES_DIR"/{alias,macos}; do
     [ -f "$DOTFILE" ] && source "$DOTFILE"
 done
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
 # symlinks
 
-ln -sfv "$DOTFILES_DIR/com/.bash_profile" ~
-ln -sfv "$DOTFILES_DIR/com/.zshrc" ~
-ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
+ln -sfv "$DOTFILES_DIR/.bash_profile" ~
+ln -sfv "$DOTFILES_DIR/.zshrc" ~
+ln -sfv "$DOTFILES_DIR/.gitconfig" ~
 
 # sublime settings
 ln -sfv "$SUBLIME_DIR/AdvancedNewFile.sublime-settings" ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/AdvancedNewFile.sublime-settings
@@ -32,3 +36,7 @@ fi
 if [ ! -d ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/snippets ]; then
 	ln -sfv "$SUBLIME_DIR/snippets/" ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/snippets > /dev/null 2>&1;
 fi
+
+unset SUBLIME_DIR
+unset DOTFILES_DIR
+unset NVM_DIR
