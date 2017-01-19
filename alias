@@ -4,8 +4,9 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ~="cd ~"
 
-alias db="cd ~/Dropbox"
-alias dl="cd ~/Downloads"
+alias dropbox="cd ~/Dropbox"
+alias downloads="cd ~/Downloads"
+alias desktop="cd ~/Desktop"
 
 alias l="ls -lFG"
 alias la="ls -laFG"
@@ -14,6 +15,14 @@ alias ls="command ls -G"
 
 alias art="php artisan"
 alias migrate="php artisan migrate"
+
+alias gs="git status"
+alias gl="git log"
+alias gcom="git checkout master"
+alias gaa="git add ."
+alias gc="git commit -m"
+alias gp="git push"
+alias nah="git reset --hard && git clean -df"
 
 if [ ! -h /usr/local/bin/subl ] && [ -e "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ]; then
 	echo "Adding subl command";
