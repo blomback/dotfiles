@@ -72,5 +72,17 @@ defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
 # Use column view in all Finder windows by default
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
+# Auto hide the dock
+defaults write com.apple.Dock autohide -bool true
+
+# Place dock on left side
+defaults write com.apple.dock orientation left
+
+# 32px dock icons
+defaults write com.apple.dock tilesize -int 36
+
+# Remove dock auto hide delay
+defaults write com.apple.dock autohide-delay -float 0;killall Dock
+
 # Show the ~/Library folder
 chflags nohidden ~/Library
