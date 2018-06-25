@@ -5,8 +5,10 @@
 	],
 	"installed_packages":
 	[
+		"A File Icon",
 		"AdvancedNewFile",
 		"Alignment",
+		"ayu",
 		"Better CoffeeScript",
 		"Colorsublime",
 		"Dayle Rees Color Schemes",
