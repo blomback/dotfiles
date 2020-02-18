@@ -1,14 +1,15 @@
 {
 	"caret_extra_width": 1,
 	"caret_style": "phase",
-	"color_scheme": "Packages/Colorsublime - Themes/cache/Colorsublime-Themes-master/themes/Cozy.tmTheme",
+	"color_scheme": "Packages/Colorsublime - Themes/cache/Colorsublime-Themes-master/themes/Juicy.tmTheme",
 	"draw_indent_guides": true,
 	"enable_tab_scrolling": false,
-	"font_face": "Fira Code",
+	"font_face": "Input Mono",
 	"font_size": 14.0,
 	"highlight_line": true,
 	"ignored_packages":
 	[
+		"PHP Companion",
 		"Vintage"
 	],
 	"line_padding_bottom": 10,
