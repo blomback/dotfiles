@@ -7,5 +7,7 @@
 	{ "keys": ["f7"], "command": "insert_php_constructor_property" },
 	{ "keys": ["f8"], "command": "import_namespace" },
 	{ "keys": ["f9"], "command": "expand_fqcn"},
-	{ "keys": ["f10"], "command": "find_use"}
+	{ "keys": ["f10"], "command": "find_use"},
+	{ "keys": ["super+ctrl+alt+shift+f"], "command": "js_prettier"},
+  { "keys": ["super+ctrl+alt+shift+d"], "command": "expand_tabs", "args": {"set_translate_tabs": true} }
 ]
