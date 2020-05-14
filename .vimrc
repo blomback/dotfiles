@@ -7,7 +7,6 @@ syntax enable
 set number
 set t_CO=256
 colorscheme desert
-set macligatures
 
 set guioptions-=e
 set guioptions-=l
