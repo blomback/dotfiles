@@ -1,17 +1,28 @@
+################################
+# Shortcuts
+################################
+
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ~="cd ~"
 
-alias dropbox="cd ~/Dropbox"
-alias downloads="cd ~/Downloads"
-alias desktop="cd ~/Desktop"
+alias downloads="cd $HOME/Downloads"
+alias desktop="cd $HOME/Desktop"
 
 alias l="ls -lFG"
 alias la="ls -laFG"
 alias lsd="ls -lFG | grep --color=never '^d'"
 alias ls="command ls -G"
+
+alias ec="subl $HOME/.zshrc"
+alias sc="source $HOME/.zshrc"
+
+
+################################
+# Development
+################################
 
 alias art="php artisan"
 alias migrate="php artisan migrate"
@@ -24,6 +35,20 @@ alias gc="git commit -m"
 alias gp="git push"
 alias nah="git reset --hard && git clean -df"
 
+
+################################
+# Suffix Aliases
+################################
+
+alias -s md=subl
+alias -s json=subl
+alias -s {js,jsx,ts,tsx,html,php}=subl
+
+
+################################
+# Applications
+################################
+
 if [ ! -h /usr/local/bin/subl ] && [ -e "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ]; then
 	echo "Adding subl command";
 	ln -sfv "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl;
@@ -33,6 +58,11 @@ fi;
 alias chrome="open -a /Applications/Google\ Chrome.app"
 alias safari="open -a /Applications/Safari.app"
 alias ios="open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app"
+
+
+################################
+# macOS
+################################
 
 alias flushdns="dscacheutil -flushcache && killall -HUP mDNSResponder"
 

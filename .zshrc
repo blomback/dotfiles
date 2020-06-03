@@ -61,7 +61,12 @@ export PATH=$PATH:/usr/local/bin:~/bin:~/.composer/vendor/bin:~/.npm-global/bin:
 source $ZSH/oh-my-zsh.sh
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
+# This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# This loads nvm bash_completion
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -72,6 +77,7 @@ export NVM_DIR="$HOME/.nvm"
 # else
 #   export EDITOR='mvim'
 # fi
+export EDITOR=/usr/bin/nano
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -85,6 +91,5 @@ export NVM_DIR="$HOME/.nvm"
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="subl ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+source $HOME/.dotfiles/alias
