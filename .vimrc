@@ -9,10 +9,10 @@ set ruler
 " Ignore case when searching
 set ignorecase
 
-" Highlight search results
-set hlsearch
+" Do not highlight search results
+set nohlsearch
 
-" Makes search act like search in modern browsers
+" Makes search act like search in modern browsers (incremental)
 set incsearch
 
 " Don't redraw while executing macros
@@ -38,12 +38,6 @@ set novisualbell
 set t_vb=
 set tm=500
 
-" Set color scheme
-colorscheme desert
-
-" Set dark background
-set background=dark
-
 " Use spaces instead of tabs
 set expandtab
 
@@ -63,6 +57,11 @@ set ai
 set si
 " Wrap lines
 set wrap
+
+set noswapfile
+
+" Always show the status line
+set laststatus=2
 
 " Fast saving
 nmap <leader>w :w!<cr>
@@ -84,10 +83,28 @@ nmap <leader>t<leader> :tabnext
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-" Always show the status line
-set laststatus=2
+call plug#begin('~/.vim/plugged')
 
-" Automatically source vimrc
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'flazz/vim-colorschemes'
+Plug 'chriskempson/base16-vim'
+
+call plug#end()
+
+" Visual settings
+colorscheme base16-horizon-dark
+set background=dark
+highlight LineNr ctermfg=grey ctermbg=black
+highlight FoldColumn ctermfg=grey ctermbg=black
+let g:airline_theme='minimalist'
+
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+
+" Automatically source vimrc when saved
 augroup sourcing
   autocmd!
   autocmd! BufWritePost .vimrc source %
