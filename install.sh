@@ -7,8 +7,10 @@ export SUBLIME_DIR=$DOTFILES_DIR/sublime
 # update dotfiles from repo
 [ -d "$DOTFILES_DIR/.git" ] && git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin master
 
-# run setup files
+# download base16 themes
+git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 
+# run setup files
 for DOTFILE in "$DOTFILES_DIR"/{alias,macos}; do
     [ -f "$DOTFILE" ] && source "$DOTFILE"
 done
@@ -19,7 +21,6 @@ export NVM_DIR="$HOME/.nvm"
 
 
 # symlinks
-
 ln -sfv "$DOTFILES_DIR/.bash_profile" ~
 ln -sfv "$DOTFILES_DIR/.zshrc" ~
 ln -sfv "$DOTFILES_DIR/.vimrc" ~
