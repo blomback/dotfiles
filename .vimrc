@@ -1,4 +1,29 @@
-let mapleader=","
+" 
+"
+"       
+"       ██▒   █▓ ██▓ ███▄ ▄███▓ ██▀███   ▄████▄  
+"      ▓██░   █▒▓██▒▓██▒▀█▀ ██▒▓██ ▒ ██▒▒██▀ ▀█  
+"       ▓██  █▒░▒██▒▓██    ▓██░▓██ ░▄█ ▒▒▓█    ▄ 
+"        ▒██ █░░░██░▒██    ▒██ ▒██▀▀█▄  ▒▓▓▄ ▄██▒
+"         ▒▀█░  ░██░▒██▒   ░██▒░██▓ ▒██▒▒ ▓███▀ ░
+"         ░ ▐░  ░▓  ░ ▒░   ░  ░░ ▒▓ ░▒▓░░ ░▒ ▒  ░
+"         ░ ░░   ▒ ░░  ░      ░  ░▒ ░ ▒░  ░  ▒   
+"           ░░   ▒ ░░      ░     ░░   ░ ░        
+"            ░   ░         ░      ░     ░ ░      
+"           ░                           ░        
+"
+" 
+
+" Use , as leader key
+let mapleader=" "
+
+" Enable plugins
+call plug#begin('~/.vim/plugged')
+Plug 'itchyny/lightline.vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'chriskempson/base16-vim'
+Plug 'preservim/nerdtree'
+call plug#end()
 
 " Enable line numbers
 set number
@@ -9,18 +34,19 @@ set ruler
 " Ignore case when searching
 set ignorecase
 
-" Do not highlight search results
+" Don't highlight search results
 set nohlsearch
 
-" Makes search act like search in modern browsers (incremental)
+" Enable incremental search 
 set incsearch
 
 " Don't redraw while executing macros
 set lazyredraw
 
-" Show matching brackets when text indicator is over them
+" Indicate matching brackets 
 set showmatch
-" How many tenths of a second to blink when matching brackets
+
+" Blinking interval for brackets 
 set mat=2
 
 " Add a bit of extra margin to the left
@@ -38,30 +64,18 @@ set novisualbell
 set t_vb=
 set tm=500
 
-" Use spaces instead of tabs
-set expandtab
-
-" Enable smart tabs
-set smarttab
-
-" Set 7 lines to the cursor - when moving vertically using j/k
-set so=7
-
-" 1 tab = 2 spaces
-set shiftwidth=2
+ 
+" Indentation
+set expandtab                 " Use spaces instead of tabs
+set smarttab                  " Enable smart tabs
+set so=6                      " Set 6 lines below the cursor
+set shiftwidth=2              " 1 tab = 2 spaces
 set tabstop=2
-
-" Auto indent
-set ai
-" Smart indent
-set si
-" Wrap lines
-set wrap
-
+set ai                        " Auto indent
+set si                        " Smart indent
+set wrap                      " Wrap lines
 set noswapfile
-
-" Always show the status line
-set laststatus=2
+set laststatus=2              " Always show the status line
 
 " Fast saving
 nmap <leader>w :w!<cr>
@@ -71,33 +85,35 @@ nmap <leader>w :w!<cr>
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
 " Open vimrc in a new tab
-nmap <Leader>ev :tabedit $MYVIMRC<cr>
+nmap <leader>ev :tabedit $MYVIMRC<cr>
 
 " Tab management
 nmap <leader>tn :tabnew<cr>
 nmap <leader>to :tabonly<cr>
 nmap <leader>tc :tabclose<cr>
 nmap <leader>tm :tabmove<cr>
-nmap <leader>t<leader> :tabnext
+nmap <leader>t<leader> :tabnext<cr>
+
+" Window management 
+nmap <leader>h :wincmd h<cr>
+nmap <leader>j :wincmd j<cr>
+nmap <leader>k :wincmd k<cr>
+nmap <leader>l :wincmd l<cr>
+
+" Toggle filebrowser
+nmap <leader>o :NERDTreeToggle<cr>
 
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-call plug#begin('~/.vim/plugged')
-
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'flazz/vim-colorschemes'
-Plug 'chriskempson/base16-vim'
-
-call plug#end()
-
 " Visual settings
-colorscheme base16-horizon-dark
+colorscheme base16-gruvbox-dark-hard
 set background=dark
 highlight LineNr ctermfg=grey ctermbg=black
 highlight FoldColumn ctermfg=grey ctermbg=black
-let g:airline_theme='minimalist'
+let g:lightline = {
+  \ 'colorscheme': 'seoul256',
+  \ }
 
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
