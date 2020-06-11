@@ -6,8 +6,11 @@ export dotfiles_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # update dotfiles from repo
 [ -d "$dotfiles_dir/.git" ] && git --work-tree="$dotfiles_dir" --git-dir="$dotfiles_dir/.git" pull origin master
 
+
+[ -d ~/.oh-my-zsh ] || git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+
 # download base16 themes
-git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+[ -d ~/.config/base16-shell ] || git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 
 # run global setup files
 for file in "$dotfiles_dir"/{.aliases}; do
@@ -21,6 +24,7 @@ if [ "$(uname)" == "Darwin" ]; then
   done;
   unset file;
 fi;
+
 
 # symlinks
 ln -sfv "$dotfiles_dir/.bash_profile" ~
