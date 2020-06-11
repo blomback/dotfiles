@@ -1,4 +1,4 @@
-local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
+local ret_status="%m %(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
 
 #function git_prompt_info() {
 #  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
