@@ -1,0 +1,5 @@
+#!/bin/sh 
+
+export nvm_dir="$HOME/.nvm"
+
+[ -s "$nvm_dir/nvm.sh" ] && . "$nvm_dir/nvm.sh" # This loads nvm
