@@ -14,7 +14,7 @@
 "
 " 
 
-" Use , as leader key
+" Use space  as leader key
 let mapleader=" "
 
 " Enable plugins
@@ -103,11 +103,11 @@ nmap <leader>l :wincmd l<cr>
 " Toggle filebrowser
 nmap <leader>o :NERDTreeToggle<cr>
 
-" Return to last edit position when opening files (You want this!)
+" Return to last edit position when opening files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Visual settings
-colorscheme base16-gruvbox-dark-hard
+colorscheme base16-ashes
 set background=dark
 highlight LineNr ctermfg=grey ctermbg=black
 highlight FoldColumn ctermfg=grey ctermbg=black
