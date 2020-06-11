@@ -7,7 +7,7 @@ export dotfiles_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 [ -d "$dotfiles_dir/.git" ] && git --work-tree="$dotfiles_dir" --git-dir="$dotfiles_dir/.git" pull origin master
 
 
-[ -d ~/.oh-my-zsh ] || git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+[ -d ~/.oh-my-zsh ] || sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # download base16 themes
 [ -d ~/.config/base16-shell ] || git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
