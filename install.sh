@@ -33,6 +33,7 @@ ln -sfv "$dotfiles_dir/.vimrc" ~
 ln -sfv "$dotfiles_dir/.gvimrc" ~
 ln -sfv "$dotfiles_dir/.gitconfig" ~
 ln -sfv "$dotfiles_dir/.hushlogin" ~
+ln -sfv "$dotfiles_dir/.tmux.conf" ~
 
 # oh my zsh themes
 ln -sfv "$dotfiles_dir/oh-my-zsh/themes/gitster.zsh-theme" ~/.oh-my-zsh/themes/gitster.zsh-theme
