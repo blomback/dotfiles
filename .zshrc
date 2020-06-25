@@ -1,6 +1,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+#sudo /usr/local/bin/mosh-allow-ufw
+
 unsetopt PROMPT_SP
 
 # Set name of the theme to load.
