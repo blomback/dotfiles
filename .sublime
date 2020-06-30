@@ -1,5 +1,6 @@
 #!/bin/sh
-export SUBLIME_DIR=$DOTFILES_DIR/sublime
+export dotfiles_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+export SUBLIME_DIR=$dotfiles_dir/sublime
 
 ln -sfv "$SUBLIME_DIR/AdvancedNewFile.sublime-settings" ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/AdvancedNewFile.sublime-settings
 ln -sfv "$SUBLIME_DIR/Base File.sublime-settings" ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Base\ File.sublime-settings
