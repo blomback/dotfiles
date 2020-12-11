@@ -9,7 +9,7 @@ unsetopt PROMPT_SP
 # Look in ~/.oh-my-zsh/s/
 # Optionally, if you set this to "random", it'll load a random  each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="gentoo"
+ZSH_THEME="blomback"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"

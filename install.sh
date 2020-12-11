@@ -36,8 +36,7 @@ ln -sfv "$dotfiles_dir/.hushlogin" ~
 ln -sfv "$dotfiles_dir/.tmux.conf" ~
 
 # oh my zsh themes
-ln -sfv "$dotfiles_dir/oh-my-zsh/themes/gitster.zsh-theme" ~/.oh-my-zsh/themes/gitster.zsh-theme
-
+ln -sfv "$dotfiles_dir/oh-my-zsh/themes/blomback.zsh-theme" ~/.oh-my-zsh/themes/blomback.zsh-theme
 
 unset dotfiles_dir;
 unset nvm_dir;
