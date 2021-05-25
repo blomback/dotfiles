@@ -1,6 +1,6 @@
 {
-	"caret_extra_width": 1,
-	"caret_style": "phase",
+	"caret_extra_width": 4,
+	"caret_style": "blink",
 	"color_scheme": "Packages/Dayle Rees Color Schemes/sublime/slime.tmTheme",
 	"draw_indent_guides": true,
 	"enable_tab_scrolling": false,
@@ -10,18 +10,18 @@
 	"ignored_packages":
 	[
 		"PHP Companion",
-		"Vintage"
+		"Vintage",
 	],
 	"indent_guide_options":
 	[
 		"draw_normal"
 	],
-	"line_padding_bottom": 7,
-	"line_padding_top": 7,
+	"line_padding_bottom": 4,
+	"line_padding_top": 4,
 	"show_panel_on_build": false,
 	"tab_size": 2,
 	"theme": "Adaptive.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"word_wrap": false
+	"word_wrap": false,
 }
