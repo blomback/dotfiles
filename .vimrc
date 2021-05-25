@@ -22,7 +22,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'chriskempson/base16-vim'
-Plug 'preservim/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'preservim/nerdtree'
 call plug#end()
 
 " Enable line numbers
@@ -51,6 +52,8 @@ set mat=2
 
 " Add a bit of extra margin to the left
 set foldcolumn=1
+
+"set background=dark
 
 " Enable syntax highighting
 syntax enable
@@ -101,7 +104,7 @@ nmap <leader>k :wincmd k<cr>
 nmap <leader>l :wincmd l<cr>
 
 " Toggle filebrowser
-nmap <leader>o :NERDTreeToggle<cr>
+"nmap <leader>o :NERDTreeToggle<cr>
 
 " Unbind arrow keys
 noremap <Up> <NOP>
@@ -118,18 +121,14 @@ inoremap <Right> <NOP>
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Visual settings
-colorscheme base16-ashes
-set background=dark
+colorscheme xoria256
 highlight LineNr ctermfg=grey ctermbg=black
 highlight FoldColumn ctermfg=grey ctermbg=black
-let g:lightline = {
-  \ 'colorscheme': 'seoul256',
-  \ }
 
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
+"if filereadable(expand("~/.vimrc_background"))
+"  let base16colorspace=256
+"  source ~/.vimrc_background
+"endif
 
 " Automatically source vimrc when saved
 augroup sourcing
