@@ -1,4 +1,5 @@
 export PATH=$PATH:/usr/local/bin:~/bin:~/.composer/vendor/bin:~/.npm-global/bin:./node_modules/.bin:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:/usr/local/opt/python/libexec/bin
+export LANG=en_US.UTF-8
 
 [ -z "$PS1" ] && return
 

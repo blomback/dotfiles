@@ -22,8 +22,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'chriskempson/base16-vim'
-Plug 'ctrlpvim/ctrlp.vim'
-"Plug 'preservim/nerdtree'
+"Plug 'ctrlpvim/ctrlp.vim'
+Plug 'preservim/nerdtree'
 call plug#end()
 
 " Enable line numbers
@@ -94,7 +94,7 @@ nmap <leader>ev :tabedit $MYVIMRC<cr>
 nmap <leader>tn :tabnew<cr>
 nmap <leader>to :tabonly<cr>
 nmap <leader>tc :tabclose<cr>
-nmap <leader>tm :tabmove<cr>
+nmap <leader>tm :tabmovev<cr>
 nmap <leader>t<leader> :tabnext<cr>
 
 " Window management 
@@ -104,7 +104,8 @@ nmap <leader>k :wincmd k<cr>
 nmap <leader>l :wincmd l<cr>
 
 " Toggle filebrowser
-"nmap <leader>o :NERDTreeToggle<cr>
+nmap <leader>o :NERDTreeToggle<cr>
+nmap <silent> <leader>f :NERDTreeFind<cr>
 
 " Unbind arrow keys
 noremap <Up> <NOP>
