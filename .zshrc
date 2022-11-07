@@ -55,7 +55,11 @@ ZSH_THEME="blomback"
 # Add wisely, as too many plugins slow down shell startup.
 export NVM_LAZY_LOAD=true
 export NVM_COMPLETION=true
-plugins=(zsh-nvm git)
+plugins=(
+  zsh-nvm
+  git
+  zsh-autosuggestions
+)
 
 # User configuration
 
